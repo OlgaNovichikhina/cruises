@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {clickOnToggle} from './modules/modals/burger';
+import {clickOnToggle, clickOnBody} from './modules/modals/burger';
 
 // ---------------------------------
 
@@ -8,9 +8,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+  const HEADER_NAV = document.querySelector('.header');
+  const PROMO = document.querySelector('.promo');
+  HEADER_NAV.classList.remove('header--nojs');
+  PROMO.classList.remove('promo--nojs');
 
   iosVhFix();
   clickOnToggle();
+  clickOnBody();
 
   // Modules
   // ---------------------------------

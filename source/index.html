@@ -14,44 +14,43 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="header">
-          <div class="header__container">
-            <a class="header__logo">
-              <svg class="header__icon" aria-hidden="true" focusable="false" width="70" height="38"
-                xmlns="http://www.w3.org/2000/svg">
-                <use href="img/sprite.svg#logo"></use>
-              </svg>
-              <span class="visually-hidden">Логотип проекта "Круизы в Антарктику"</span>
-            </a>
-            <nav class="header__navigation header__navigation--closed header__navigation--nojs">
-              <ul class="header__list">
-                <li class="header__item">
-                  <a class="header__link" href="#advantages" data-anchor>Преимущества</a>
-                </li>
-                <li class="header__item">
-                  <a class="header__link" href="#cruises" data-anchor>Направления</a>
-                </li>
-                <li class="header__item">
-                  <a class="header__link" href="#cruises" data-anchor>Ближайшие круизы</a>
-                </li>
-                <li class="header__item">
-                  <a class="header__link" href="#contacts" data-anchor>Контакты</a>
-                </li>
-              </ul>
-              <button class="header__toggle" type="button">
-                <span class="visually-hidden">Открыть меню</span>
-              </button>
-            </nav>
-          </div>
+      <header class="header header--closed header--nojs">
+        <div class="container header__container">
+          <a class="header__logo">
+            <svg class="header__icon" aria-hidden="true" focusable="false" width="70" height="38"
+              xmlns="http://www.w3.org/2000/svg">
+              <use href="img/sprite.svg#logo"></use>
+            </svg>
+            <span class="visually-hidden">Логотип проекта "Круизы в Антарктику"</span>
+          </a>
+          <nav class="header__navigation">
+            <button class="header__toggle" type="button">
+              <span class="visually-hidden">Открыть/закрыть меню</span>
+            </button>
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#advantages" data-anchor>Преимущества</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#cruises" data-anchor>Направления</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#cruises" data-anchor>Ближайшие круизы</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#contacts" data-anchor>Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
-
-
       <main>
-        <section class="intro">
-          <div class="container">
-
+        <section class="promo promo--nojs">
+          <div class="container promo__container">
+            <div class="promo__text">
+              <h1>Круизы в&nbsp;Антарктику</h1>
+              <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+            </div>
           </div>
         </section>
       </main>
