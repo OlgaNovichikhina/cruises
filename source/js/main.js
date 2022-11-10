@@ -1,6 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {clickOnToggle, clickOnBody} from './modules/modals/burger';
+import {scrollPage} from './modules/modals/scroll';
+
+
 
 // ---------------------------------
 
@@ -10,12 +13,41 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   const HEADER_NAV = document.querySelector('.header');
   const PROMO = document.querySelector('.promo');
+
   HEADER_NAV.classList.remove('header--nojs');
   PROMO.classList.remove('promo--nojs');
+
+
+  const JOURNEY = document.querySelector('.journey');
+  const BODY = document.body;
+  const PROMO_TEXT = document.querySelector('.promo__text');
+  let scroll;
+
+  scroll = PROMO.scrollHeight;
+  JOURNEY.style.marginTop = scroll + 'px';
+
+  window.addEventListener('resize', function () {
+    if (BODY.offsetWidth >= 1023) {
+      scroll = PROMO.scrollHeight;
+      PROMO_TEXT.style.display = 'block';
+    }
+    if (BODY.offsetWidth >= 768 && BODY.offsetWidth < 1023) {
+      scroll = PROMO.scrollHeight;
+      PROMO_TEXT.style.display = 'block';
+    }
+    if (BODY.offsetWidth >= 320 && BODY.offsetWidth < 768) {
+      scroll = PROMO.scrollHeight;
+      PROMO_TEXT.style.display = 'none';
+    }
+    JOURNEY.style.marginTop = scroll + 'px';
+    scroll = 0;
+  });
+
 
   iosVhFix();
   clickOnToggle();
   clickOnBody();
+  scrollPage();
 
   // Modules
   // ---------------------------------

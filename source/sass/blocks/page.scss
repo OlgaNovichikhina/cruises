@@ -1,0 +1,24 @@
+.page--lock {
+  overflow: hidden;
+
+  @media (min-width: (768px)) {
+    overflow: visible;
+  }
+}
+
+.page--lock::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+
+  @media (min-width: (768px)) {
+    display: none;
+  }
+}
