@@ -30,12 +30,16 @@ window.addEventListener('DOMContentLoaded', () => {
     if (BODY.offsetWidth >= 1023) {
       scroll = PROMO.scrollHeight;
       PROMO_TEXT.style.display = 'block';
+      HEADER_NAV.classList.add('header--closed');
+      HEADER_NAV.classList.remove('header--opened');
     }
     if (BODY.offsetWidth >= 768 && BODY.offsetWidth < 1023) {
       scroll = PROMO.scrollHeight;
       PROMO_TEXT.style.display = 'block';
+      HEADER_NAV.classList.add('header--closed');
+      HEADER_NAV.classList.remove('header--opened');
     }
-    if (BODY.offsetWidth >= 320 && BODY.offsetWidth < 768) {
+    if (BODY.offsetWidth < 768) {
       scroll = PROMO.scrollHeight;
       PROMO_TEXT.style.display = 'none';
     }

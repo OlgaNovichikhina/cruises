@@ -88,6 +88,7 @@
   user-select: none;
 
   &:hover {
+    transition: all 0.3s ease-in-out;
     color: $color-quartz;
     text-shadow: $color-default-white 2px 0 10px;
   }
