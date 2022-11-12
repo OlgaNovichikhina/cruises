@@ -954,8 +954,8 @@ button,
 }
 
 .advantages {
-  background-image: -webkit-image-set(url("../img/background/background-advantages@2x.webp") 2x, url("../img/background/background-advantages.png") 1x);
-  background-image: image-set("../img/background/background-advantages@2x.webp" 2x, "../img/background/background-advantages.png" 1x);
+  background-image: -webkit-image-set(url("../img/background/background-advantages@2x.webp") 2x, url("../img/background/background-advantages.webp") 1x);
+  background-image: image-set("../img/background/background-advantages@2x.webp" 2x, "../img/background/background-advantages.webp" 1x);
   background-color: #cfe4fb;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1052,7 +1052,7 @@ button,
 }
 
 .cruises__container {
-  padding: 92px 65px;
+  padding: 92px 65px 120px;
 }
 
 .cruises h2 {
@@ -1068,15 +1068,23 @@ button,
 }
 
 .cruises h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   max-width: 200px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   color: #f9fbfd;
   z-index: 1;
-  position: absolute;
-  bottom: 5px;
-  left: 30px;
   font-size: 18px;
   line-height: 150%;
   font-weight: 500;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 6px;
+  left: 30px;
 }
 
 .cruises__list {
@@ -1092,9 +1100,10 @@ button,
 }
 
 .cruises__item img {
+  position: absolute;
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: 386px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1102,13 +1111,22 @@ button,
 .cruises__item {
   overflow: hidden;
   position: relative;
-  min-height: 386px;
-  max-width: 400px;
+  width: 100%;
+  height: 386px;
   margin: 0 auto;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #3375c5;
 }
 
 .cruises__item::before {
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -1162,30 +1180,26 @@ button,
 }
 
 .cruises__description-wrapper {
-  background: #011c40;
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  top: 0;
+  overflow-y: auto;
   width: 100%;
   height: 100%;
+  background: #011c40;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .cruises__description {
-  position: absolute;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  bottom: 0;
-  height: 318px;
   width: 100%;
-  padding: 0 25px 34px 25px;
+  height: 100%;
+  padding: 0 25px 44px 25px;
   color: #f9fbfd;
   background: #011c40;
   -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   opacity: 0;
   visibility: hidden;
-  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1193,7 +1207,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  scrollbar-gutter: auto;
 }
 
 .cruises__description h4 {
@@ -1217,49 +1230,58 @@ button,
   min-width: 210px;
   background-color: #f9fbfd;
   margin-top: auto;
+  margin-bottom: 10px;
 }
 
 .cruises__item:hover {
   background: #011c40;
   z-index: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .cruises__item:focus-visible .cruises__description-wrapper,
 .cruises__item:hover .cruises__description-wrapper {
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   opacity: 1;
   visibility: visible;
   z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .cruises__item:focus-visible .cruises__description,
 .cruises__item:hover .cruises__description {
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   opacity: 1;
   visibility: visible;
   z-index: 2;
-  top: 68px;
 }
 
 .cruises__item:focus-visible h3,
 .cruises__item:hover h3 {
-  top: 10px;
-  left: 25px;
-  display: block;
+  position: static;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  z-index: 3;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  background-color: #011c40;
+  padding: 27px 25px 14px;
 }
 
 .cruises__item:focus-visible::before,
 .cruises__item:hover::before {
   width: 0;
   height: 0;
+}
+
+.cruises__item:focus-visible img,
+.cruises__item:hover img {
+  display: none;
 }
 
 .button {
@@ -1291,6 +1313,218 @@ button,
 
 .button:active {
   opacity: 0.4;
+}
+
+.feedback {
+  background-image: -webkit-image-set(url("../img/background/form-desktop@2x.webp") 2x, url("../img/background/form-desktop.webp") 1x);
+  background-image: image-set("../img/background/form-desktop@2x.webp" 2x, "../img/background/form-desktop.webp" 1x);
+  background-color: #afd5ee;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 148px 51px;
+}
+
+.feedback__container {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1170px;
+}
+
+.feedback__title {
+  display: block;
+  width: 55%;
+  padding-top: 128px;
+  padding-right: 20px;
+}
+
+.feedback__title .feedback__title-break {
+  display: block;
+}
+
+.feedback__title h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  margin-bottom: 0;
+}
+
+.feedback__title p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 10px;
+}
+
+.form {
+  width: 38%;
+  min-width: 403px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background: #011c40;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  padding: 24px 50px 51px;
+}
+
+.form p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+  margin-bottom: 8px;
+}
+
+.form input {
+  width: 100%;
+  min-height: 43px;
+  outline: 1px solid transparent;
+  border: 1px solid transparent;
+  padding: 8px 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input:hover,
+.form input:focus-visible {
+  outline: 1px solid #3375c5;
+  border: 1px solid #3375c5;
+}
+
+.form input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  top: -24px;
+  left: 9px;
+}
+
+.form__check-box {
+  position: absolute;
+  margin-left: -22px;
+  margin-top: -3px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background: #f9fbfd;
+}
+
+.form__check-box:hover {
+  opacity: 0.8;
+}
+
+.form input:checked + .form__check-box {
+  background-image: url("../img/svg/checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form [data-check] {
+  position: relative;
+  cursor: pointer;
+  margin-top: 3px;
+  margin-bottom: 13px;
+  padding-left: 22px;
+  color: #f9fbfd;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+}
+
+.form input:hover + .form__check-box,
+.form input:focus-visible + .form__check-box {
+  border: 1px solid #3375c5;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contacts__map-wrapper {
+  min-width: 560px;
+  min-height: 306px;
+  background-color: #edede3;
+  background-image: -webkit-image-set(url("../img/map-desktop@2x.webp") 2x, url("../img/map-desktop.webp") 1x);
+  background-image: image-set("../img/map-desktop@2x.webp" 2x, "../img/map-desktop.webp" 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts__list {
+  list-style: none;
+}
+
+.contacts p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.contacts a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 /* @mixin hover-focus {
@@ -1469,7 +1703,7 @@ button,
   }
 
   .cruises__container {
-    padding: 95px 60px;
+    padding: 95px 60px 100px;
   }
 
   .cruises h2 {
@@ -1536,7 +1770,8 @@ button,
   }
 
   .cruises__item {
-    min-width: 250px;
+    max-width: 400px;
+    width: 100%;
     min-height: 386px;
     gap: 10px;
   }
@@ -1561,6 +1796,60 @@ button,
   .cruises__item:focus-visible h3,
   .cruises__item:hover h3 {
     left: 25px;
+  }
+
+  .feedback {
+    background-image: -webkit-image-set(url("../img/background/form-tablet@2x.webp") 2x, url("../img/background/form-tablet.webp") 1x);
+    background-image: image-set("../img/background/form-tablet@2x.webp" 2x, "../img/background/form-tablet.webp" 1x);
+    padding: 50px 148px 101px;
+  }
+
+  .feedback {
+    background-image: -webkit-image-set(url("../img/background/form-mobile@2x.webp") 2x, url("../img/background/form-mobile.webp") 1x);
+    background-image: image-set("../img/background/form-mobile@2x.webp" 2x, "../img/background/form-mobile.webp" 1x);
+    padding: 30px 0;
+  }
+
+  .feedback__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .feedback__title {
+    width: 100%;
+    padding-top: 8px;
+    padding-right: 0;
+  }
+
+  .feedback__title h2 {
+    display: block;
+    text-align: center;
+    font-size: 34px;
+  }
+
+  .feedback__title p {
+    display: block;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 54px;
+  }
+
+  .form {
+    max-width: 403px;
+    width: 90%;
+    padding: 35px 50px 50px;
+  }
+
+  .form p {
+    display: block;
+    text-align: start;
+    margin-top: 8px;
+    margin-bottom: 7px;
   }
 }
 
@@ -1782,7 +2071,7 @@ button,
   }
 
   .cruises__container {
-    padding: 62px 25px;
+    padding: 62px 25px 65px;
   }
 
   .cruises h2 {
@@ -1853,12 +2142,53 @@ button,
   }
 
   .cruises__item {
+    min-width: 270px;
     max-width: 380px;
     height: 386px;
   }
 
   .cruises__description {
     padding: 21px 25px 33px;
+  }
+
+  .feedback__title .feedback__title-break {
+    display: none;
+  }
+
+  .feedback__title h2 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .feedback__title p {
+    font-size: 16px;
+    line-height: 140%;
+    padding: 0 10px;
+    margin-top: 13px;
+    margin-bottom: 34px;
+  }
+
+  .form {
+    min-width: 100%;
+    padding: 27px 30px 50px;
+  }
+
+  .form p {
+    line-height: 140%;
+    text-align: center;
+  }
+
+  .form__check-box {
+    margin-left: -28px;
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .form [data-check] {
+    margin-top: -2px;
+    margin-bottom: 8px;
+    padding-left: 28px;
   }
 }
 

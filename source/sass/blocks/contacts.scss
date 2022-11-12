@@ -1,0 +1,31 @@
+.contacts__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacts__map-wrapper {
+  min-width: 560px;
+  min-height: 306px;
+  background-color: $color-sugar-cane;
+  background-image: image-set("../img/map-desktop@2x.webp" 2x,
+  "../img/map-desktop.webp" 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts__list {
+  list-style: none;
+}
+
+.contacts p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.contacts a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}

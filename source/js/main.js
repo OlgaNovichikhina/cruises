@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {clickOnToggle, clickOnBody} from './modules/modals/burger';
 import {scrollPage} from './modules/modals/scroll';
-
+import {inputFormTel, inputFormName} from './modules/modals/form';
 
 
 // ---------------------------------
@@ -52,6 +52,8 @@ window.addEventListener('DOMContentLoaded', () => {
   clickOnToggle();
   clickOnBody();
   scrollPage();
+  inputFormTel();
+  inputFormName();
 
   // Modules
   // ---------------------------------
