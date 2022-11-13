@@ -15,9 +15,11 @@
 }
 
 .button:focus-visible,
+.button:focus,
 .button:hover {
   color: $color-quartz;
   background-color: $color-curious-blue;
+  outline: $color-curious-blue;
 }
 
 .button:active {
