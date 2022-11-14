@@ -10,13 +10,38 @@
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+    <link rel="preload" href="./img/background/background-advantages@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/background-advantages.webp" as="image" type="image/webp" crossorigin="anonymous">
+
+    <link rel="preload" href="./img/map-desktop@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/map-desktop.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/map-tablet@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/map-tablet.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/map-mobile@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/map-mobile.webp" as="image" type="image/webp" crossorigin="anonymous">
+
+    <link rel="preload" href="./img/background/form-desktop@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/form-desktop.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/form-tablet@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/form-tablet.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/form-mobile@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/form-mobile.webp" as="image" type="image/webp" crossorigin="anonymous">
+
+    <link rel="preload" href="./img/background/background-desktop@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/background-desktop.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/background-tablet@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/background-tablet.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/background-mobile@2x.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link rel="preload" href="./img/background/background-mobile.webp" as="image" type="image/webp" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header header--closed header--nojs">
         <div class="container header__container">
-          <a class="header__logo" href="#">
+          <a class="header__logo">
             <svg class="header__icon" aria-hidden="true" focusable="false" width="70" height="38"
               xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#logo"></use>
@@ -91,8 +116,10 @@
               <!--1 карточка-->
               <li class="cruises__item cruises__item--astoria" tabindex="0">
                 <picture>
-                  <source type="image/webp" srcset="./img/cards/card-1.webp, ./img/cards/card-1@2x.webp 2x" width="260" height="386">
-                  <img loading="lazy" src="./img/cards/card-1.png" srcset="./img/cards/card-1@2x.png 2x" alt="Заснеженные горы на фоне неба."  width="260" height="386">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-1.webp, ./img/cards/card-mobile-1@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-1.webp, ./img/cards/card-tablet-1@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-1.webp, ./img/cards/card-desktop-1@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-1.png" srcset="./img/cards/card-desktop-1@2x.png 2x" alt="Заснеженные горы на фоне неба." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Астория&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -105,16 +132,17 @@
                     <p>11 дней</p>
                     <h4>Цена</h4>
                     <p>от 11500 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
               <!--2 карточка-->
               <li class="cruises__item" tabindex="0">
                 <picture>
-                  <source srcset="./img/cards/card-1.webp 1x, ./img/cards/card-1@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-1.png" width="260" height="386" srcset="./img/cards/card-1@2x.png 2x"
-                  alt="Заснеженные горы на фоне неба.">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-1.webp, ./img/cards/card-mobile-1@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-1.webp, ./img/cards/card-tablet-1@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-1.webp, ./img/cards/card-desktop-1@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-1.png" srcset="./img/cards/card-desktop-1@2x.png 2x" alt="Заснеженные горы на фоне неба." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Элайн&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -127,16 +155,18 @@
                     <p>20 дней</p>
                     <h4>Цена</h4>
                     <p>от 14500 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
               <!--3 карточка-->
               <li class="cruises__item cruises__item--atlantis" tabindex="0">
                 <picture>
-                  <source srcset="./img/cards/card-3.webp 1x, ./img/cards/card-3@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-3.png" width="260" height="386" srcset="./img/cards/card-3@2x.png 2x"
-                  alt="Айсберг.">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-3.webp, ./img/cards/card-mobile-3@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-3.webp, ./img/cards/card-tablet-3@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-3.webp, ./img/cards/card-desktop-3@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-3.png" srcset="./img/cards/card-desktop-3@2x.png 2x"
+                  alt="Айсберг." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Атлантис&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -149,16 +179,18 @@
                     <p>15 дней</p>
                     <h4>Цена</h4>
                     <p>от 14500 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
               <!--4 карточка-->
               <li class="cruises__item cruises__item--odyssey" tabindex="0">
                 <picture>
-                  <source srcset="./img/cards/card-4.webp 1x, ./img/cards/card-4@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-4.png" width="260" height="386" srcset="./img/cards/card-4@2x.png 2x"
-                  alt="Заснеженные горы и озеро.">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-4.webp, ./img/cards/card-mobile-4@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-4.webp, ./img/cards/card-tablet-4@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-4.webp, ./img/cards/card-desktop-4@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-4.png" srcset="./img/cards/card-desktop-4@2x.png 2x"
+                  alt="Заснеженные горы и озеро." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Одиссей&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -171,16 +203,18 @@
                     <p>13 дней</p>
                     <h4>Цена</h4>
                     <p>от 9700 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
               <!--5 карточка-->
               <li class="cruises__item cruises__item--olimpiya" tabindex="0">
                 <picture>
-                  <source srcset="./img/cards/card-5.webp 1x, ./img/cards/card-5@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-5.png" width="260" height="386" srcset="./img/cards/card-5@2x.png 2x"
-                  alt="Колония пингвинов на фоне снега и заснеженных гор.">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-5.webp, ./img/cards/card-mobile-5@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-5.webp, ./img/cards/card-tablet-5@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-5.webp, ./img/cards/card-desktop-5@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-5.png" srcset="./img/cards/card-desktop-5@2x.png 2x"
+                  alt="Колония пингвинов на фоне снега и заснеженных гор." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Олимпия&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -193,16 +227,18 @@
                     <p>21 день</p>
                     <h4>Цена</h4>
                     <p>от 18600 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
               <!--6 карточка-->
               <li class="cruises__item cruises__item--aurora" tabindex="0">
                 <picture>
-                  <source srcset="./img/cards/card-6.webp 1x, ./img/cards/card-6@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-6.png" width="260" height="386" srcset="./img/cards/card-6@2x.png 2x"
-                  alt="Скалистый берег моря.">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-6.webp, ./img/cards/card-mobile-6@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-6.webp, ./img/cards/card-tablet-6@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-6.webp, ./img/cards/card-desktop-6@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-6.png" srcset="./img/cards/card-desktop-6@2x.png 2x"
+                  alt="Скалистый берег моря." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Аврора&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -215,16 +251,18 @@
                     <p>14 дней</p>
                     <h4>Цена</h4>
                     <p>от 11700 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
               <!--7 карточка-->
               <li class="cruises__item cruises__item--leonor" tabindex="0">
                 <picture>
-                  <source srcset="./img/cards/card-7.webp 1x, ./img/cards/card-7@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-7.webp" width="260" height="386" srcset="./img/cards/card-7@2x.png 2x"
-                  alt="Яхта в море на фоне заснеженных гор.">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-7.webp, ./img/cards/card-mobile-7@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-7.webp, ./img/cards/card-tablet-7@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-7.webp, ./img/cards/card-desktop-7@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-7.png" srcset="./img/cards/card-desktop-7@2x.png 2x"
+                  alt="Яхта в море на фоне заснеженных гор." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Леонор&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -237,16 +275,18 @@
                     <p>17 дней</p>
                     <h4>Цена</h4>
                     <p>от 12500 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
               <!--8 карточка-->
               <li class="cruises__item cruises__item--minion" tabindex="0">
                 <picture>
-                  <source srcset="./img/cards/card-8.webp 1x, ./img/cards/card-8@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-8.png" width="260" height="386" srcset="./img/cards/card-8@2x.png 2x"
-                  alt="Заснеженные горы, море. Туристы поднимаются на берег.">
+                  <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-8.webp, ./img/cards/card-mobile-8@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-8.webp, ./img/cards/card-tablet-8@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-8.webp, ./img/cards/card-desktop-8@2x.webp 2x" type="image/webp">
+                  <img loading="lazy" src="./img/cards/card-desktop-8.png" srcset="./img/cards/card-desktop-8@2x.png 2x"
+                  alt="Заснеженные горы, море. Туристы поднимаются на берег." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Минион - 1&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -259,7 +299,7 @@
                     <p>11 дней</p>
                     <h4>Цена</h4>
                     <p>от 12300 $</p>
-                    <a class="button" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
@@ -291,34 +331,84 @@
                 <span class="form__check-box"></span>
                 Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных
               </label>
-              <button class="form__button button" type="submit">Оставить заявку</button>
+              <button class="form__button btn" type="submit">Оставить заявку</button>
             </form>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
+          <h2 class="visually-hidden">Как нас найти</h2>
           <div class="container contacts__container">
-            <div class="contacts__map-wrapper">
-              <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018930805114!2d30.321953058721924!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648889368990!5m2!1sru!2sru" width="320" height="200" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contacts__map-wrapper" id="map">
+              <iframe class="contacts__map" tabindex="-1" title="карта" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018930805114!2d30.321953058721924!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648889368990!5m2!1sru!2sru" width="320" height="200" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contacts__content">
               <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
               <ul class="contacts__list">
                 <li class="contacts__item contacts__item--address">
-                  <a href="https://yandex.ru/maps/-/CCU6R-hz3C">г. Санкт Петербург, <br class="contacts__break"> ул. Большая Конюшенная, 19/8</a>
+                  <a class="contacts__link" href="https://yandex.ru/maps/-/CCU6R-hz3C">г. Санкт Петербург, <br class="contacts__break"> ул. Большая Конюшенная, 19/8</a>
                 </li>
                 <li class="contacts__item contacts__item--phone">
-                  <a href="tel:+88002000000">8-800-200-00-00</a>
+                  <a class="contacts__link" href="tel:+88002000000">8-800-200-00-00</a>
                 </li>
               </ul>
-
             </div>
           </div>
         </section>
       </main>
-
-      <footer>
-        <div class="container">
-
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__navigation">
+            <a class="footer__logo" href="#">
+              <svg class="footer__icon" aria-hidden="true" focusable="false" width="70" height="38"
+                xmlns="http://www.w3.org/2000/svg">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+              <span class="visually-hidden">Логотип проекта "Круизы в Антарктику"</span>
+            </a>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#advantages" data-anchor>Преимущества</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#cruises" data-anchor>Направления</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#cruises" data-anchor>Ближайшие круизы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#contacts" data-anchor>Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="footer__social-list social">
+            <li class="social__item social__item--ok">
+              <a class="social__link" href="https://ok.ru">
+                <svg class="social__icon social__icon--ok" aria-hidden="true" focusable="false" width="12" height="20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#ok"></use>
+                </svg>
+                <span class="visually-hidden">Одноклассники</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://dzen.ru">
+                <svg class="social__icon social__icon--dzen" aria-hidden="true" focusable="false" width="20" height="20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#yandex"></use>
+                </svg>
+                <span class="visually-hidden">Яндекс</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.reddit.com">
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#reddit"></use>
+                </svg>
+                <span class="visually-hidden">Реддит</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </footer>
     </div>

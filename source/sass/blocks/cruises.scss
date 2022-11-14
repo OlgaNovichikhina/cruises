@@ -90,137 +90,6 @@
   display: flex;
   flex-direction: column;
   background-color: $color-curious-blue;
-
-  &::before {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, $color-default-black 100%);
-  }
-
-  &--astoria img {
-    object-position: -166px 0;
-
-    @include vp-1023 {
-      object-position: -145px 0;
-    }
-
-    @include vp-767 {
-      object-position: -164px 0;
-    }
-  }
-
-  &--atlantis img {
-    object-position: -126px 0;
-
-    @include vp-1023 {
-      object-position: -103px 0;
-    }
-
-    @include vp-767 {
-      object-position: -122px 0;
-    }
-  }
-
-  &--odyssey img {
-    object-position: -118px 0;
-    width: 109%;
-    height: 109%;
-
-    @include vp-1023 {
-      object-position: -113px -6px;
-      width: 120%;
-      height: 120%;
-    }
-
-    @include vp-767 {
-      object-position: -101px 20px;
-      transform: scale(100%, 112%);
-      height: 106%;
-    }
-  }
-
-  &--olimpiya img {
-    object-position: -115px 0;
-    width: 107%;
-    height: 107%;
-
-    @include vp-1023 {
-      object-position: -143px 0;
-      width: 116%;
-      height: 116%;
-    }
-
-    @include vp-767 {
-      object-position: -122px 26px;
-      transform: scale(100%, 118%);
-      height: 100%;
-    }
-  }
-
-  &--aurora img {
-    object-position: -107px 0;
-
-    @include vp-1023 {
-      object-position: -143px 0;
-      width: 116%;
-      height: 116%;
-    }
-
-    @include vp-767 {
-      object-position: -122px 0;
-      height: 100%;
-    }
-  }
-
-  &--leonor img {
-    object-position: -144px 0;
-
-    @include vp-1023 {
-      transform: scale(120%, 100%);
-      object-position: -121px 0;
-    }
-
-    @include vp-767 {
-      object-position: -142px 0;
-      transform: scale(104%, 100%);
-    }
-  }
-
-  &--minion img {
-    object-position: -180px -1px;
-    width: 136%;
-    height: 136%;
-
-    @include vp-1023 {
-      height: 137%;
-      transform: scale(117%, 100%);
-      object-position: -158px -3px;
-    }
-
-    @include vp-767 {
-      object-position: -172px 0;
-      transform: scale(104%, 100%);
-      height: 135%;
-    }
-  }
-
-  @include vp-1023 {
-    max-width: 400px;
-    width: 100%;
-    min-height: 386px;
-    gap: 10px;
-  }
-
-  @include vp-767 {
-    min-width: 270px;
-    max-width: 380px;
-    height: 386px;
-  }
 }
 
 .cruises__description-wrapper {
@@ -245,87 +114,103 @@
 
   @include vp-1023 {
     padding: 22px 35px 33px;
+    padding-top: 0;
   }
 
   @include vp-767 {
     padding: 21px 25px 33px;
+    padding-top: 0;
   }
+}
 
-  & h4 {
-    margin: 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 140%;
-    margin-bottom: 4px;
+.cruises__description h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  margin-bottom: 4px;
 
-    @include vp-1023 {
-      margin-bottom: 2px;
-    }
+  @include vp-1023 {
+    margin-bottom: 2px;
   }
+}
 
-  & p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    color: $color-quartz;
-    margin-bottom: 9px;
+.cruises__description p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: $color-quartz;
+  margin-bottom: 9px;
 
-    @include vp-1023 {
-      margin-bottom: 11px;
-    }
+  @include vp-1023 {
+    margin-bottom: 11px;
   }
+}
 
-  & a {
-    min-width: 210px;
-    background-color: $color-default-white;
-    margin-top: auto;
-  }
+.cruises__description .cruises__link {
+  min-width: 210px;
+  background-color: $color-default-white;
+  margin-top: auto;
 }
 
 .cruises__item:hover,
 .cruises__item:focus,
-.cruises__item:focus-visible {
+.cruises__item:focus-within {
   box-shadow: 0 0 40px 20px $color-curious-blue;
   background: $color-default-black;
   z-index: 1;
   flex-direction: column;
+}
 
-  & .cruises__description-wrapper {
-    display: block;
-    overflow-y: auto;
-    overflow-x: hidden;
+.cruises__item:hover .cruises__description-wrapper,
+.cruises__item:focus .cruises__description-wrapper,
+.cruises__item:focus-within .cruises__description-wrapper {
+  display: block;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.cruises__item:hover .cruises__description,
+.cruises__item:focus .cruises__description,
+.cruises__item:focus-within .cruises__description {
+  display: flex;
+}
+
+.cruises__item:hover h3,
+.cruises__item:focus h3,
+.cruises__item:focus-within h3 {
+  position: static;
+  align-self: flex-start;
+  height: fit-content;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  background-color: $color-default-black;
+  padding: 27px 25px 14px;
+
+  @include vp-1023 {
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 5px;
   }
 
-  & .cruises__description {
-    display: flex;
+  @include vp-1023 {
+    padding-left: 25px;
+    padding-top: 18px;
   }
+}
 
-  & h3 {
-    position: static;
-    align-self: flex-start;
-    height: fit-content;
-    margin: 0;
-    width: 100%;
-    max-width: none;
-    background-color: $color-default-black;
-    padding: 27px 25px 14px;
+.cruises__item:hover img,
+.cruises__item:focus img,
+.cruises__item:focus-within img {
+  display: none;
+}
 
-    @include vp-1023 {
-      left: 35px;
-    }
-
-    @include vp-1023 {
-      left: 25px;
-    }
-  }
-
-  &::before {
-    width: 0;
-    height: 0;
-  }
-
-  & img {
-    display: none;
-  }
+.cruises__link:hover,
+.cruises__link:focus,
+.cruises__link:focus-within {
+  color: $color-quartz;
+  background-color: $color-curious-blue;
+  outline: $color-curious-blue;
 }

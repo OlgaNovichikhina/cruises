@@ -48,13 +48,13 @@
   padding: 8px 14px;
   cursor: pointer;
   user-select: none;
+}
 
-  &::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    color: rgba($color-default-black, 0.7);
-  }
+.form input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba($color-default-black, 0.7);
 }
 
 .form input:hover,

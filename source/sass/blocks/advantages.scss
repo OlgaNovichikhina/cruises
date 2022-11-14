@@ -1,7 +1,7 @@
 .advantages {
+  background-color: $color-pattens-blue;
   background-image: image-set("../img/background/background-advantages@2x.webp" 2x,
   "../img/background/background-advantages.webp" 1x);
-  background-color: $color-pattens-blue;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 562px;
@@ -56,6 +56,7 @@
 
   @include vp-1023 {
     line-height: 140%;
+    margin: 52px 0 0;
   }
 
   @include vp-767 {
@@ -146,6 +147,7 @@
 
   @include vp-1023 {
     padding: 18px;
+    padding-left: 19px;
     min-height: 310px;
   }
 
@@ -153,15 +155,13 @@
     min-height: 250px;
   }
 
-  &--zodiac-boat {
-    p {
-      @include vp-1023 {
-        margin-top: 20px;
-      }
+  &--zodiac-boat p {
+    @include vp-1023 {
+      margin-top: 20px;
+    }
 
-      @include vp-767 {
-        margin-top: 10px;
-      }
+    @include vp-767 {
+      margin-top: 10px;
     }
   }
 }

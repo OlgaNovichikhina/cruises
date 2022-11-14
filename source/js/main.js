@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {clickOnToggle, clickOnBody} from './modules/modals/burger';
+import {clickOnToggle, clickOnBody, closeMenu} from './modules/modals/burger';
 import {scrollPage} from './modules/modals/scroll';
 import {inputFormTel, inputFormName} from './modules/modals/form';
 
@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
   HEADER_NAV.classList.remove('header--nojs');
   PROMO.classList.remove('promo--nojs');
 
-
   const JOURNEY = document.querySelector('.journey');
   const BODY = document.body;
   const PROMO_TEXT = document.querySelector('.promo__text');
@@ -27,17 +26,9 @@ window.addEventListener('DOMContentLoaded', () => {
   JOURNEY.style.marginTop = scroll + 'px';
 
   window.addEventListener('resize', function () {
-    if (BODY.offsetWidth >= 1023) {
+    if (BODY.offsetWidth >= 768) {
       scroll = PROMO.scrollHeight;
-      PROMO_TEXT.style.display = 'block';
-      HEADER_NAV.classList.add('header--closed');
-      HEADER_NAV.classList.remove('header--opened');
-    }
-    if (BODY.offsetWidth >= 768 && BODY.offsetWidth < 1023) {
-      scroll = PROMO.scrollHeight;
-      PROMO_TEXT.style.display = 'block';
-      HEADER_NAV.classList.add('header--closed');
-      HEADER_NAV.classList.remove('header--opened');
+      closeMenu();
     }
     if (BODY.offsetWidth < 768) {
       scroll = PROMO.scrollHeight;
@@ -46,7 +37,6 @@ window.addEventListener('DOMContentLoaded', () => {
     JOURNEY.style.marginTop = scroll + 'px';
     scroll = 0;
   });
-
 
   iosVhFix();
   clickOnToggle();
