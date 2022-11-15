@@ -3,22 +3,28 @@ import {FocusLock} from '../../utils/focus-lock';
 const HEADER_NAV = document.querySelector('.header');
 const HEADER_TOGGLE = document.querySelector('.header__toggle');
 const BODY = document.body;
-const PROMO_TEXT = document.querySelector('.promo__text');
 const HEADER_LIST = document.querySelector('.header__list');
 const HEADER_LINK = document.querySelectorAll('.header__link');
+const PROMO = document.querySelector('.promo');
+const JOURNEY = document.querySelector('.journey');
+let scroll;
 
 function closeMenu() {
   BODY.classList.remove('page--lock');
   HEADER_NAV.classList.add('header--closed');
   HEADER_NAV.classList.remove('header--opened');
-  PROMO_TEXT.style.display = 'block';
+  scroll = PROMO.scrollHeight;
+  JOURNEY.style.marginTop = scroll + 'px';
+  scroll = 0;
 }
 
 function openMenu() {
   BODY.classList.add('page--lock');
   HEADER_NAV.classList.remove('header--closed');
   HEADER_NAV.classList.add('header--opened');
-  PROMO_TEXT.style.display = 'none';
+  scroll = PROMO.scrollHeight + 100;
+  JOURNEY.style.marginTop = scroll + 'px';
+  scroll = 0;
 }
 
 function clickOnToggle() {

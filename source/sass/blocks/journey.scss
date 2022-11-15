@@ -5,13 +5,13 @@
 .journey__container {
   display: grid;
   grid-template-columns: auto 48%;
-  padding: 14px 50px 147px;
+  padding: 25px 50px 147px;
   gap: 80px;
 
   @include vp-1023 {
     grid-template-columns: auto 48%;
     gap: 23px;
-    padding: 25px 50px 77px 46px;
+    padding: 32px 50px 77px 46px;
   }
 
   @include vp-767 {

@@ -19,7 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const JOURNEY = document.querySelector('.journey');
   const BODY = document.body;
-  const PROMO_TEXT = document.querySelector('.promo__text');
   let scroll;
 
   scroll = PROMO.scrollHeight;
@@ -32,7 +31,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     if (BODY.offsetWidth < 768) {
       scroll = PROMO.scrollHeight;
-      PROMO_TEXT.style.display = 'none';
+    }
+    if ((BODY.offsetWidth < 768) && (HEADER_NAV.classList.contains('header--opened'))) {
+      scroll = PROMO.scrollHeight + 100;
     }
     JOURNEY.style.marginTop = scroll + 'px';
     scroll = 0;
