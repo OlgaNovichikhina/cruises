@@ -16,43 +16,40 @@
     <div class="wrapper">
       <header class="header header--closed header--nojs">
         <div class="container header__container">
-          <a class="header__logo">
-            <svg class="header__icon" aria-hidden="true" focusable="false" width="70" height="38"
-              xmlns="http://www.w3.org/2000/svg">
-              <use href="img/sprite.svg#logo"></use>
-            </svg>
-            <span class="visually-hidden">Логотип проекта "Круизы в Антарктику"</span>
-          </a>
-          <nav class="header__navigation">
-            <button class="header__toggle" type="button">
-              <span class="visually-hidden">Открыть/закрыть меню</span>
-            </button>
-            <ul class="header__list">
-              <li class="header__item">
-                <a class="header__link" href="#advantages" data-anchor>Преимущества</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#cruises" data-anchor>Направления</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#cruises" data-anchor>Ближайшие круизы</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#contacts" data-anchor>Контакты</a>
-              </li>
-            </ul>
-          </nav>
+          <div class="header__navigation-wrapper">
+            <a class="header__logo" aria-label="Логотип проекта Круизы в Антарктику.">
+              <svg class="header__icon" aria-hidden="true" focusable="false" width="70" height="38"
+                xmlns="http://www.w3.org/2000/svg">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__navigation">
+              <button class="header__toggle" type="button">
+                <span class="visually-hidden">Открыть/закрыть меню</span>
+              </button>
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__link" href="#advantages" data-anchor>Преимущества</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#cruises" data-anchor>Направления</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#cruises" data-anchor>Ближайшие круизы</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#contacts" data-anchor>Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__text">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          </div>
         </div>
       </header>
       <main>
-        <section class="promo promo--nojs">
-          <div class="container promo__container">
-            <div class="promo__text">
-              <h1>Круизы в&nbsp;Антарктику</h1>
-              <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
-            </div>
-          </div>
-        </section>
         <section class="journey">
           <div class="container journey__container">
             <div class="journey__text">
@@ -60,7 +57,7 @@
               <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
             <picture>
-              <source type="image/webp" srcset="./img/penguins.webp, ./img/penguins@2x.webp 2x" width="560" height="301">
+              <source srcset="./img/penguins.webp, ./img/penguins@2x.webp 2x" type="image/webp">
               <img loading="lazy" src="./img/penguins.png" srcset="./img/penguins@2x.png 2x" alt="Пингвины." width="560" height="301">
             </picture>
           </div>
@@ -74,11 +71,11 @@
                 <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума&nbsp;и очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
               <li class="advantages__item advantages__item--all-inclusive">
-                <h3>Система <br class="advantages__break-title">все&nbsp;включено</h3>
-                <p>Все наши круизы работают по<br class="advantages__break-description"> системе &quot;Все Включено&quot;. <br>Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
+                <h3>Система все&nbsp;включено</h3>
+                <p>Все наши круизы работают по системе &quot;Все Включено&quot;. <br>Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
               </li>
               <li class="advantages__item advantages__item--zodiac-boat">
-                <h3>Экскурсионные <br class="advantages__break-title">туры на&nbsp;Zodiac</h3>
+                <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
                 <p>Экскурсионные туры к берегам Антарктиды совершаются&nbsp;на оборудованных лодках&nbsp;типа Zodiack&nbsp;c опытными экскурсоводами.</p>
               </li>
             </ul>
@@ -140,8 +137,7 @@
                   <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-3.webp, ./img/cards/card-mobile-3@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-3.webp, ./img/cards/card-tablet-3@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-3.webp, ./img/cards/card-desktop-3@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-desktop-3.png" srcset="./img/cards/card-desktop-3@2x.png 2x"
-                  alt="Айсберг." width="260" height="386">
+                  <img loading="lazy" src="./img/cards/card-desktop-3.png" srcset="./img/cards/card-desktop-3@2x.png 2x" alt="Айсберг." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Атлантис&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -164,8 +160,7 @@
                   <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-4.webp, ./img/cards/card-mobile-4@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-4.webp, ./img/cards/card-tablet-4@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-4.webp, ./img/cards/card-desktop-4@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-desktop-4.png" srcset="./img/cards/card-desktop-4@2x.png 2x"
-                  alt="Заснеженные горы и озеро." width="260" height="386">
+                  <img loading="lazy" src="./img/cards/card-desktop-4.png" srcset="./img/cards/card-desktop-4@2x.png 2x" alt="Заснеженные горы и озеро." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Одиссей&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -188,8 +183,7 @@
                   <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-5.webp, ./img/cards/card-mobile-5@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-5.webp, ./img/cards/card-tablet-5@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-5.webp, ./img/cards/card-desktop-5@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-desktop-5.png" srcset="./img/cards/card-desktop-5@2x.png 2x"
-                  alt="Колония пингвинов на фоне снега и заснеженных гор." width="260" height="386">
+                  <img loading="lazy" src="./img/cards/card-desktop-5.png" srcset="./img/cards/card-desktop-5@2x.png 2x" alt="Колония пингвинов на фоне снега и заснеженных гор." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Олимпия&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -212,8 +206,7 @@
                   <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-6.webp, ./img/cards/card-mobile-6@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-6.webp, ./img/cards/card-tablet-6@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-6.webp, ./img/cards/card-desktop-6@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-desktop-6.png" srcset="./img/cards/card-desktop-6@2x.png 2x"
-                  alt="Скалистый берег моря." width="260" height="386">
+                  <img loading="lazy" src="./img/cards/card-desktop-6.png" srcset="./img/cards/card-desktop-6@2x.png 2x" alt="Скалистый берег моря." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Аврора&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -236,8 +229,7 @@
                   <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-7.webp, ./img/cards/card-mobile-7@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-7.webp, ./img/cards/card-tablet-7@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-7.webp, ./img/cards/card-desktop-7@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-desktop-7.png" srcset="./img/cards/card-desktop-7@2x.png 2x"
-                  alt="Яхта в море на фоне заснеженных гор." width="260" height="386">
+                  <img loading="lazy" src="./img/cards/card-desktop-7.png" srcset="./img/cards/card-desktop-7@2x.png 2x" alt="Яхта в море на фоне заснеженных гор." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Леонор&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -260,8 +252,7 @@
                   <source media="(max-width: 767px)" srcset="./img/cards/card-mobile-8.webp, ./img/cards/card-mobile-8@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 1023px)" srcset="./img/cards/card-tablet-8.webp, ./img/cards/card-tablet-8@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1024px)" srcset="./img/cards/card-desktop-8.webp, ./img/cards/card-desktop-8@2x.webp 2x" type="image/webp">
-                  <img loading="lazy" src="./img/cards/card-desktop-8.png" srcset="./img/cards/card-desktop-8@2x.png 2x"
-                  alt="Заснеженные горы, море. Туристы поднимаются на берег." width="260" height="386">
+                  <img loading="lazy" src="./img/cards/card-desktop-8.png" srcset="./img/cards/card-desktop-8@2x.png 2x" alt="Заснеженные горы, море. Туристы поднимаются на берег." width="260" height="386">
                 </picture>
                 <h3>Круиз &#8220;Минион - 1&#8221;</h3>
                 <div class="cruises__description-wrapper">
@@ -285,7 +276,7 @@
           <div class="container feedback__container">
             <div class="feedback__title">
               <h2>Раннее бронирование</h2>
-              <p>Забронируйте тур за&nbsp;3&#xfeff;-&#xfeff;6&nbsp;месяцев <br class="feedback__title-break">до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+              <p>Забронируйте тур за&nbsp;3&#xfeff;-&#xfeff;6&nbsp;месяцев до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
             <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
               <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
@@ -320,7 +311,7 @@
               <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
               <ul class="contacts__list">
                 <li class="contacts__item contacts__item--address">
-                  <a class="contacts__link" href="https://yandex.ru/maps/-/CCU6R-hz3C">г. Санкт Петербург, <br class="contacts__break"> ул. Большая Конюшенная, 19/8</a>
+                  <a class="contacts__link" href="https://yandex.ru/maps/-/CCU6R-hz3C">г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8</a>
                 </li>
                 <li class="contacts__item contacts__item--phone">
                   <a class="contacts__link" href="tel:+88002000000">8-800-200-00-00</a>
@@ -333,12 +324,11 @@
       <footer class="footer">
         <div class="container footer__container">
           <div class="footer__navigation">
-            <a class="footer__logo" href="#">
+            <a class="footer__logo" href="index.html" aria-label="Логотип проекта Круизы в Антарктику.">
               <svg class="footer__icon" aria-hidden="true" focusable="false" width="70" height="38"
                 xmlns="http://www.w3.org/2000/svg">
                 <use href="img/sprite.svg#logo"></use>
               </svg>
-              <span class="visually-hidden">Логотип проекта "Круизы в Антарктику"</span>
             </a>
             <ul class="footer__list">
               <li class="footer__item">
@@ -357,30 +347,27 @@
           </div>
           <ul class="footer__social-list social">
             <li class="social__item social__item--ok">
-              <a class="social__link" href="https://ok.ru">
+              <a class="social__link" href="https://ok.ru" aria-label="Ссылка на Однокласники.">
                 <svg class="social__icon social__icon--ok" aria-hidden="true" focusable="false" width="12" height="20"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#ok"></use>
                 </svg>
-                <span class="visually-hidden">Одноклассники</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://dzen.ru">
+              <a class="social__link" href="https://dzen.ru" aria-label="Ссылка на Дзен.">
                 <svg class="social__icon social__icon--dzen" aria-hidden="true" focusable="false" width="20" height="20"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#yandex"></use>
                 </svg>
-                <span class="visually-hidden">Яндекс</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.reddit.com">
+              <a class="social__link" href="https://www.reddit.com" aria-label="Ссылка на Реддит.">
                 <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="20"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#reddit"></use>
                 </svg>
-                <span class="visually-hidden">Реддит</span>
               </a>
             </li>
           </ul>

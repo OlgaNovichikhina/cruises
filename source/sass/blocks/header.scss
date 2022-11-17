@@ -1,17 +1,44 @@
 .header {
-  z-index: 10;
+  min-height: 650px;
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: $color-curious-blue;
+  background-image: image-set("../img/background/background-desktop@2x.webp" 2x, "../img/background/background-desktop.webp" 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include vp-1023 {
+    min-height: 638px;
+    background-image: image-set("../img/background/background-tablet@2x.webp" 2x, "../img/background/background-tablet.webp" 1x);
+    box-shadow: none;
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+    background-image: image-set("../img/background/background-mobile@2x.webp" 2x, "../img/background/background-mobile.webp" 1x);
+  }
 }
 
 .header__container {
-  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    padding: 0 29px 0 28px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 0 15px;
+  }
+}
+
+.header__navigation-wrapper {
   max-width: 1260px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 33px 10px 20px;
-
-  @include vp-1023 {
-    padding: 20px 29px 10px 28px;
-  }
+  padding: 20px 0 10px;
 
   @include vp-767 {
     padding: 0;
@@ -30,20 +57,17 @@
 
 .header__icon {
   margin-top: 14px;
-  margin-left: 30px;
 
   @include vp-1023 {
+    margin: 10px 0 0 17px;
     width: 38px;
     height: 20px;
-    margin-top: 10px;
-    margin-left: 17px;
   }
 
   @include vp-767 {
+    margin: 20px 0 0;
     width: 42px;
     height: 22px;
-    margin-top: 20px;
-    margin-left: 15px;
   }
 
   &:focus {
@@ -123,11 +147,61 @@
   cursor: pointer;
   border: none;
   margin-top: 23px;
-  margin-right: 15px;
 
   @include vp-767 {
     display: block;
     align-self: flex-end;
+  }
+}
+
+.header__text {
+  padding: 172px 0 0 96px;
+  margin-bottom: 50px;
+
+  @include vp-1023 {
+    padding: 198px 0 0 17px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 130px;
+    margin-top: 136px;
+  }
+}
+
+.header__text h1 {
+  margin: 0 0 12px;
+  font-size: 54px;
+  line-height: 66px;
+  font-weight: 700;
+  color: $color-default-white;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.header__text p {
+  margin: 0;
+  color: $color-default-white;
+  font-size: 20px;
+  line-height: 24px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    padding-right: 60px;
+    font-size: 16px;
   }
 }
 
@@ -153,13 +227,18 @@
   }
 }
 
+.header--opened .header__text {
+  margin-top: 175px;
+  padding-left: 15px;
+}
+
 .header--opened .header__navigation {
   @include vp-767 {
     position: absolute;
     background-color: $color-default-white;
     z-index: 11;
-    width: 285px;
-    height: 100vh;
+    width: 89%;
+    height: 101vh;
     right: 0;
   }
 }
@@ -167,14 +246,15 @@
 .header--opened .header__list {
   @include vp-767 {
     display: grid;
-    grid-template-columns: 277px;
+    grid-template-columns: 1fr;
     flex-direction: column;
     position: absolute;
     top: 67px;
-    right: 0;
-    overflow: auto;
+    overflow-x: auto;
+    width: 99%;
     height: auto;
     max-height: calc(100vh - 67px);
+    margin-left: 2px;
   }
 }
 
@@ -200,7 +280,7 @@
     position: absolute;
     z-index: 12;
     top: 20px;
-    right: 200px;
+    left: 16%;
   }
 }
 
@@ -213,6 +293,7 @@
 
 .header--nojs .header__navigation {
   @include vp-767 {
+    width: 100%;
     margin-bottom: 50px;
   }
 }
@@ -229,12 +310,12 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    color: $color-default-black;
+    color: $color-default-white;
   }
 }
 
 .header--nojs .header__icon {
   @include vp-767 {
-    fill: $color-default-black;
+    fill: $color-default-white;
   }
 }

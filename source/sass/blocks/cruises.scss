@@ -1,3 +1,7 @@
+.cruises {
+  background-color: $color-default-white;
+}
+
 .cruises__container {
   padding: 92px 65px 120px;
 
@@ -105,7 +109,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 0 25px 34px 25px;
+  padding: 2px 25px 18px;
   color: $color-default-white;
   background: $color-default-black;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
@@ -113,35 +117,31 @@
   flex-direction: column;
 
   @include vp-1023 {
-    padding: 22px 35px 33px;
-    padding-top: 0;
+    padding: 0 35px 19px;
   }
 
   @include vp-767 {
-    padding: 21px 25px 33px;
-    padding-top: 0;
+    padding: 0 25px 20px;
   }
 }
 
 .cruises__description h4 {
-  margin: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
-  margin-bottom: 4px;
+  margin: 0 0 2px;
 
   @include vp-1023 {
-    margin-bottom: 2px;
+    margin: 0 0 2px;
   }
 }
 
 .cruises__description p {
-  margin: 0;
+  margin: 0 0 10px;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   color: $color-quartz;
-  margin-bottom: 9px;
 
   @include vp-1023 {
     margin-bottom: 11px;
@@ -149,7 +149,6 @@
 }
 
 .cruises__description .cruises__link {
-  min-width: 210px;
   background-color: $color-default-white;
   margin-top: auto;
 }
@@ -161,6 +160,7 @@
   background: $color-default-black;
   z-index: 1;
   flex-direction: column;
+  padding-bottom: 15px;
 }
 
 .cruises__item:hover .cruises__description-wrapper,
@@ -168,7 +168,7 @@
 .cruises__item:focus-within .cruises__description-wrapper {
   display: block;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x: visible;
 }
 
 .cruises__item:hover .cruises__description,
@@ -185,19 +185,16 @@
   height: fit-content;
   margin: 0;
   width: 100%;
-  max-width: none;
+  max-width: auto;
   background-color: $color-default-black;
-  padding: 27px 25px 14px;
+  padding: 28px 25px 14px;
 
   @include vp-1023 {
-    padding-left: 35px;
-    padding-top: 20px;
-    padding-bottom: 5px;
+    padding: 28px 25px 15px 35px;
   }
 
-  @include vp-1023 {
-    padding-left: 25px;
-    padding-top: 18px;
+  @include vp-767 {
+    padding: 27px 25px 15px;
   }
 }
 

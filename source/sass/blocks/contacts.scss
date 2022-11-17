@@ -1,3 +1,7 @@
+.contacts {
+  background-color: $color-default-white;
+}
+
 .contacts__container {
   display: flex;
   justify-content: space-between;
@@ -19,15 +23,13 @@
   min-width: 560px;
   min-height: 306px;
   background-color: $color-sugar-cane;
-  background-image: image-set("../img/map-desktop@2x.webp" 2x,
-  "../img/map-desktop.webp" 1x);
+  background-image: image-set("../img/map-desktop@2x.webp" 2x, "../img/map-desktop.webp" 1x);
   background-repeat: no-repeat;
 
   @include vp-1023 {
-    background-image: image-set("../img/map-tablet@2x.webp" 2x,
-    "../img/map-tablet.webp" 1x);
+    background-image: image-set("../img/map-tablet@2x.webp" 2x, "../img/map-tablet.webp" 1x);
     min-width: 324px;
-    min-height: none;
+    min-height: auto;
     width: 324px;
     height: 335px;
   }

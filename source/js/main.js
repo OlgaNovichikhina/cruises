@@ -1,5 +1,4 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {clickOnToggle, clickOnBody, closeMenu} from './modules/modals/burger';
 import {scrollPage} from './modules/modals/scroll';
 import {inputFormTel, inputFormName} from './modules/modals/form';
@@ -12,31 +11,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
   const HEADER_NAV = document.querySelector('.header');
-  const PROMO = document.querySelector('.promo');
-
   HEADER_NAV.classList.remove('header--nojs');
-  PROMO.classList.remove('promo--nojs');
 
-  const JOURNEY = document.querySelector('.journey');
   const BODY = document.body;
-  let scroll;
-
-  scroll = PROMO.scrollHeight;
-  JOURNEY.style.marginTop = scroll + 'px';
 
   window.addEventListener('resize', function () {
     if (BODY.offsetWidth >= 768) {
-      scroll = PROMO.scrollHeight;
       closeMenu();
     }
-    if (BODY.offsetWidth < 768) {
-      scroll = PROMO.scrollHeight;
-    }
-    if ((BODY.offsetWidth < 768) && (HEADER_NAV.classList.contains('header--opened'))) {
-      scroll = PROMO.scrollHeight + 100;
-    }
-    JOURNEY.style.marginTop = scroll + 'px';
-    scroll = 0;
   });
 
   iosVhFix();
@@ -51,9 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
+  // window.addEventListener('load', () => {
+  // initModals();
+  // });
 });
 
 // ---------------------------------
