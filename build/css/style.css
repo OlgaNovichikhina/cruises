@@ -788,7 +788,7 @@ button,
 }
 
 .header__text {
-  padding: 172px 0 0 96px;
+  padding: 172px 0 230px 96px;
   margin-bottom: 50px;
 }
 
@@ -1615,7 +1615,7 @@ button,
   }
 
   .header__text {
-    padding: 198px 0 0 17px;
+    padding: 199px 0 225px 17px;
   }
 
   .header__text h1 {

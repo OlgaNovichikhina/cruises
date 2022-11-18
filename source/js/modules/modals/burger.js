@@ -57,5 +57,3 @@ function clickOnBody() {
 }
 
 export {clickOnToggle, clickOnBody, closeMenu};
-
-
