@@ -85,6 +85,8 @@
 }
 
 .cruises__item {
+  scrollbar-color: $color-curious-blue $color-default-black; /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;  /* толщина */
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -94,6 +96,18 @@
   display: flex;
   flex-direction: column;
   background-color: $color-curious-blue;
+
+  ::-webkit-scrollbar {
+    width: 3px; /* ширина для вертикального скролла */
+    background-color: $color-default-black;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-curious-blue;
+    border-radius: 3em;
+    box-shadow: inset 1px 1px 3px $color-sugar-cane;
+  }
 
   @include vp-1023 {
     aspect-ratio: 309/386;

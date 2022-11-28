@@ -1,4 +1,4 @@
-.page--lock {
+.page-lock {
   @include vp-767 {
     overflow: hidden;
   }
@@ -11,7 +11,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 43, 102, 0.5);
     z-index: 10;
   }
 }

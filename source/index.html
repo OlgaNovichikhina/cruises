@@ -242,7 +242,7 @@
                     <p>17 дней</p>
                     <h4>Цена</h4>
                     <p>от 12500 $</p>
-                    <a class="cruises__link btn" href="#" tabindex="0">Забронировать</a>
+                    <a class="cruises__link btn btn--card" href="#" tabindex="0">Забронировать</a>
                   </div>
                 </div>
               </li>
@@ -286,7 +286,7 @@
               </label>
               <label>
                 <span class="visually-hidden">Напишите свой номер телефона.</span>
-                <input placeholder="Телефон" type="tel" name="phone" required maxlength="11" pattern="^[0-9]+$" title="Номер телефона должен содержать 11 цифр">
+                <input placeholder="Телефон" type="tel" name="phone" required pattern="^[0-9\s)(+)-]+$" title="Номер телефона может содержать цифры, открывающую и закрывающую крублые скобки, пробел и знаки + и -">
               </label>
               <label>
                 <span class="visually-hidden">Напишите свой e-mail.</span>

@@ -7,13 +7,13 @@ const HEADER_LIST = document.querySelector('.header__list');
 const HEADER_LINK = document.querySelectorAll('.header__link');
 
 function closeMenu() {
-  BODY.classList.remove('page--lock');
+  BODY.classList.remove('page-lock');
   HEADER_NAV.classList.add('header--closed');
   HEADER_NAV.classList.remove('header--opened');
 }
 
 function openMenu() {
-  BODY.classList.add('page--lock');
+  BODY.classList.add('page-lock');
   HEADER_NAV.classList.remove('header--closed');
   HEADER_NAV.classList.add('header--opened');
 }
@@ -52,7 +52,7 @@ function clickOnBody() {
       focusLock.unlock();
     }
   });
-  BODY.classList.remove('page--lock');
+  BODY.classList.remove('page-lock');
   focusLock.unlock();
 }
 

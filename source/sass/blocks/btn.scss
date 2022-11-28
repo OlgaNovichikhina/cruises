@@ -18,6 +18,10 @@
 
     pointer-events: none;
   }
+
+  &--card {
+    padding: 10px 5px;
+  }
 }
 
 .btn:focus-visible,

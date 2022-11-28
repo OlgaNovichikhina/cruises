@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -665,6 +667,10 @@ button,
   pointer-events: none;
 }
 
+.btn--card {
+  padding: 10px 5px;
+}
+
 .btn:focus-visible,
 .btn:focus,
 .btn:hover {
@@ -818,7 +824,7 @@ button,
   padding-left: 15px;
 }
 
-.page--lock::before {
+.page-lock::before {
   content: "";
   display: block;
   position: fixed;
@@ -826,7 +832,7 @@ button,
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 43, 102, 0.5);
   z-index: 10;
 }
 
@@ -1019,6 +1025,10 @@ button,
 }
 
 .cruises__item {
+  scrollbar-color: #3375c5 #011c40;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+  /* толщина */
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -1033,6 +1043,20 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #3375c5;
+  /* ползунок скроллбара */
+}
+
+.cruises__item ::-webkit-scrollbar {
+  width: 3px;
+  /* ширина для вертикального скролла */
+  background-color: #011c40;
+}
+
+.cruises__item ::-webkit-scrollbar-thumb {
+  background-color: #3375c5;
+  border-radius: 3em;
+  -webkit-box-shadow: inset 1px 1px 3px #edede3;
+  box-shadow: inset 1px 1px 3px #edede3;
 }
 
 .cruises__description-wrapper {
@@ -2022,7 +2046,7 @@ button,
     fill: #f9fbfd;
   }
 
-  .page--lock {
+  .page-lock {
     overflow: hidden;
   }
 

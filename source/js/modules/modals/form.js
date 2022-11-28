@@ -3,8 +3,9 @@ function inputFormTel() {
 
   INPUT_TEL.forEach(function (item) {
     item.addEventListener('input', () => {
-      const value = item.value.replace(/\D+/g, '');
-      const numberLength = 11;
+      // const value = item.value.replace(/[a-zA-ZА-Яа-яЁё]/g, '');//ограничивает только ввод букв
+      const value = item.value.replace(/[^0-9\s)(+)-]/g, ''); // ограничивает ввод всех символов кроме указанных
+      const numberLength = 100;
 
       let result = '';
 
@@ -12,12 +13,6 @@ function inputFormTel() {
         result += value[i];
       }
       item.value = result;
-    });
-
-    item.addEventListener('blur', () => {
-      if (item.value.length < 11) {
-        item.value = '';
-      }
     });
   });
 }
